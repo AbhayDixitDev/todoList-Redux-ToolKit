@@ -35,10 +35,10 @@ function App() {
     return (
       <tr key={key.id} className="border-b border-gray-700">
         <td className="px-4 py-2 text-white">{sn}</td>
-        <td className={`px-4 py-2 ${key.status ? "text-green-400 font-apple" : "text-red-400 line-through font-apple"}`}>
+        <td className={`px-4 py-2 ${!key.status ? "text-green-400 font-apple" : "text-red-400 line-through font-apple"}`}>
           <span className="flex items-center justify-center ">
             <span className="font-apple">{key.task}</span>
-            {key.status ? (
+            {!key.status ? (
               <img className="ml-2" src="https://png.pngtree.com/png-vector/20221215/ourmid/pngtree-green-check-mark-png-image_6525691.png" width="20px" alt="done" />
             ) : (
               <img className="ml-2" src="https://wallpapers.com/images/featured/wrong-cross-png-udus7ti1t6w4cq0d.jpg" width="16px" alt="not done" />
